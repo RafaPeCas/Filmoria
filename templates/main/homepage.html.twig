@@ -1,0 +1,17 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{{parent()}} | Jandra Perra{% endblock %}
+
+{% block body %}
+	<h1>JANDRA TOTALMENTE PERRA</h1>
+
+	<div>
+		Mira como de perra es jandra
+		{{NivelDePerra}}
+		{% if NivelDePerra > 199 %}
+			<p>
+				Si que es perra, si
+			</p>
+		{% endif %}
+	</div>
+{% endblock %}

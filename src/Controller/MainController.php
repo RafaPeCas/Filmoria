@@ -2,14 +2,18 @@
 
 namespace App\Controller;
 
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
-class MainController
+class MainController extends AbstractController
 {
     #[Route('/')]
     public function homepage(): Response
     {
-        return new Response('<strong>Jandra Perra</strong>: La novia mas perra de entre las perras');
+        $NivelDePerra = 1000;
+        return $this->render("main/homepage.html.twig",[
+            'NivelDePerra' => $NivelDePerra,
+        ]);
     }
 }
